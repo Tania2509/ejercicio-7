@@ -23,6 +23,7 @@ namespace ejercicio_7
         {
             txtConversion.Clear();
             txtCantidad.Clear();
+            lblError.Text = "Error:";
             txtCantidad.ReadOnly = false;
         }
 
@@ -44,19 +45,19 @@ namespace ejercicio_7
 
                 else
                 {
-                    txtConversion.Text = "Ingrese numeros positivos";
+                    lblError.Text = "Ingrese numeros positivos";
                 }
             }
             else
             {
                 if (string.IsNullOrEmpty(txtCantidad.Text))
                 {
-                    txtConversion.Text = "Existe un campo vacio";
+                    lblError.Text = "Existe un campo vacio";
                 }
 
                 else
                 {
-                    txtConversion.Text = "Ingresa numeros y no letras";
+                    lblError.Text = "Ingresa numeros y no letras";
                 }
             }
 
